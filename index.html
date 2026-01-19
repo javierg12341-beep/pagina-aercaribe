@@ -24,58 +24,52 @@
                     </a>
                 </div>
 
-                <button id="btn-menu" class="md:hidden p-2 z-[60] relative">
-                    <svg id="icono-menu" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="btn-menu" class="md:hidden p-2 z-[110] relative focus:outline-none">
+                    <svg id="icono-menu" class="w-8 h-8 transition-transform duration-300" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
 
                 <div id="menu-links"
-                    class="fixed top-0 left-0 w-full h-screen bg-[#7F0039] flex flex-col items-center justify-center gap-8 font-semibold text-lg transform translate-x-full transition-transform duration-500 ease-in-out z-50 md:static md:h-auto md:w-auto md:bg-transparent md:flex-row md:text-sm md:translate-x-0 md:transition-none">
+                    class="fixed top-0 left-0 w-full h-screen bg-[#7F0039] flex flex-col items-center justify-center gap-8 font-semibold text-lg transform translate-x-full transition-transform duration-500 ease-in-out z-[100] md:static md:h-auto md:w-auto md:bg-transparent md:flex-row md:text-sm md:translate-x-0 md:transition-none">
 
-                    <a href="#" class="hover:text-[#DDB847]">Inicio</a>
+                    <a href="#" class="hover:text-[#DDB847] transition-colors">Inicio</a>
 
-                    <div class="group relative flex flex-col items-center">
-                        <button class="flex items-center gap-1 hover:text-[#DDB847] cursor-pointer">
+                    <div class="dropdown-container relative flex flex-col items-center">
+                        <button class="submenu-btn flex items-center gap-1 hover:text-[#DDB847] cursor-pointer">
                             Grupo Aercaribe
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 transition-transform flecha" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-
                         <div
-                            class="hidden group-hover:flex flex-col bg-[#7F0039] md:absolute md:top-full md:left-0 md:min-w-[180px] md:shadow-xl md:rounded-b-md p-4 gap-3 z-[110]">
-                            <a href="#"
-                                class="text-sm hover:text-[#DDB847] whitespace-nowrap border-b border-white/10 pb-1">Quienes
+                            class="submenu-content hidden flex-col bg-[#7F0039] md:absolute md:top-full md:left-0 md:min-w-[180px] md:shadow-xl md:rounded-b-md p-4 gap-3 z-[110]">
+                            <a href="#" class="text-sm hover:text-[#DDB847] border-b border-white/10 pb-1">Quienes
                                 somos</a>
-                            <a href="#"
-                                class="text-sm hover:text-[#DDB847] whitespace-nowrap border-b border-white/10 pb-1">Centro
-                                de Instrucción</a>
-                            <a href="#" class="text-sm hover:text-[#DDB847] whitespace-nowrap">Perú</a>
+                            <a href="#" class="text-sm hover:text-[#DDB847] border-b border-white/10 pb-1">Centro de
+                                Instrucción</a>
+                            <a href="#" class="text-sm hover:text-[#DDB847]">Perú</a>
                         </div>
                     </div>
 
-                    <div class="group relative flex flex-col items-center">
-                        <button class="flex items-center gap-1 hover:text-[#DDB847] cursor-pointer">
+                    <div class="dropdown-container relative flex flex-col items-center">
+                        <button class="submenu-btn flex items-center gap-1 hover:text-[#DDB847] cursor-pointer">
                             Cargo
-                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 transition-transform flecha" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-
                         <div
-                            class="hidden group-hover:flex flex-col bg-[#7F0039] md:absolute md:top-full md:left-0 md:min-w-[180px] md:shadow-xl md:rounded-b-md p-4 gap-3 z-[110]">
-                            <a href="#"
-                                class="text-sm hover:text-[#DDB847] whitespace-nowrap border-b border-white/10 pb-1">Tipos
-                                de Carga</a>
-                            <a href="#"
-                                class="text-sm hover:text-[#DDB847] whitespace-nowrap border-b border-white/10 pb-1">Cotización
-                                Cargo</a>
+                            class="submenu-content hidden flex-col bg-[#7F0039] md:absolute md:top-full md:left-0 md:min-w-[180px] md:shadow-xl md:rounded-b-md p-4 gap-3 z-[110]">
+                            <a href="#" class="text-sm hover:text-[#DDB847] border-b border-white/10 pb-1">Tipos de
+                                Carga</a>
+                            <a href="#" class="text-sm hover:text-[#DDB847]">Cotización Cargo</a>
                         </div>
                     </div>
 
@@ -84,10 +78,10 @@
                     <a href="#" class="hover:text-[#DDB847]">Flotas</a>
                     <a href="#" class="hover:text-[#DDB847]">PQR</a>
 
-                    <div class="flex items-center h-7">
+                    <div class="flex items-center h-8">
                         <a href="https://www.psepagos.co/PSEHostingUI/ShowTicketOffice.aspx?ID=10884" target="_blank"
                             class="h-full block">
-                            <img src="./Img/pse-aercaribe.png" class="w-full h-full object-contain">
+                            <img src="./Img/pse-aercaribe.png" class="w-full h-full object-contain brightness-0 invert">
                         </a>
                     </div>
                 </div>
