@@ -1,1 +1,34 @@
 @import "tailwindcss";
+
+@theme {
+  /* 1. Animación del avión (entrada lateral) */
+  @keyframes slide-right {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  /* 2. Animación de la escena (solo al inicio) */
+  @keyframes fade-out-inicio {
+    0% { opacity: 0; }
+    15%, 85% { opacity: 1; }  
+    100% { opacity: 0; pointer-events: none; } 
+  }
+
+  /* 3. Animación de aparición suave para el botón */
+  @keyframes fade-in-delayed {
+    0%, 85% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* 4. Efecto de pulsación para el botón de audio */
+  @keyframes pulse-soft {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(221, 184, 71, 0.4); }
+    50% { transform: scale(1.05); }
+  }
+
+  /* Registro de clases */
+  --animate-entrada-avion: slide-right 1.2s ease-out forwards;
+  --animate-escena-unica: fade-out-inicio 8s ease-in-out forwards;
+  --animate-boton-aparecer: fade-in-delayed 9s ease-out forwards;
+  --animate-pulso: pulse-soft 2s infinite ease-in-out;
+}
